@@ -14,17 +14,8 @@ body {
     margin: auto;
 }
 
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+img {
+    display: block;
 }
 
 /* reset styles */
@@ -59,6 +50,10 @@ button {
 }
 
 /* header */
+
+.header {
+    border-bottom: 1px solid #e7e9fc;
+}
 
 .header-container {
     display: flex;
@@ -135,13 +130,12 @@ button {
 .hero {
     background-color: #2E2F42;
     color: #FFF;
-    text-align: center;
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .hero-container {
     background-color: #2E2F42;
-    padding-top: 188px;
-    padding-bottom: 188px;
 }
 
 .hero-title {
@@ -149,11 +143,11 @@ button {
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
-    width: 496px;
+    max-width: 496px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 48px;
-    
+    text-align: center;
 }
 
 .hero-btn {
@@ -166,6 +160,9 @@ button {
     padding: 16px 32px;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    display: block;
+    min-width: 169px;
+    margin: auto;
 }
 
 .hero-btn:hover,
@@ -180,9 +177,18 @@ button {
     padding-bottom: 120px;
 }
 
-/* .values-title {
-    letter-spacing: 0.02em;
-} */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 
 .values-cards {
     display: flex;
@@ -223,7 +229,7 @@ button {
 }
 
 .team-card {
-    background-color: #ffffff;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team-name {
@@ -231,19 +237,23 @@ button {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
-    letter-spacing: 0.02em;
-    margin-top: 32px;
-    margin-bottom: 8px;
-    
+    letter-spacing: 0.02em;    
 }
 
 .team-text {
-    margin-bottom: 32px;
+    
 }
 
 .team-list {
     display: flex;
     gap: 24px;
+}
+
+.team-description {
+    border-radius: 0px 0px 4px 4px;
+    background-color: #ffffff;
+    padding: 32px 0;
+    
 }
 
 /* our portfolio */
@@ -266,13 +276,13 @@ button {
 
 .portfolio-list {
     display: flex;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 48px;
     flex-wrap: wrap;
 }
 
 .portfolio-card {
     background-color: #ffffff;
-    /* border: 1px solid #E7E9FC; */
 }
 
 .portfolio-name {
@@ -281,12 +291,17 @@ button {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    margin-top: 32px;
     margin-bottom: 8px;
 }
 
 .portfolio-text {
-    margin-bottom: 32px;
+
+}
+
+.portfolio-description {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
 }
 
 /* footer */
@@ -300,5 +315,9 @@ button {
 .text-footer {
     color: #F4F4FD;
     width: 264px;
-    margin-top: 16px;
+}
+
+.footer-link {
+    display: inline-block;
+    margin-bottom: 16px;
 }
